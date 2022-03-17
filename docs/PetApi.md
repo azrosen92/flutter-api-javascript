@@ -35,15 +35,12 @@ var apiInstance = new SwaggerPetstore.PetApi();
 
 var body = new SwaggerPetstore.Pet(); // Pet | Pet object that needs to be added to the store
 
+apiInstance.addPet(body).then(function() {
+  console.log('API called successfully.');
+}, function(error) {
+  console.error(error);
+});
 
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
-};
-apiInstance.addPet(body, callback);
 ```
 
 ### Parameters
@@ -89,15 +86,12 @@ var petId = 789; // Integer | Pet id to delete
 var opts = { 
   'apiKey': "apiKey_example" // String | 
 };
+apiInstance.deletePet(petId, opts).then(function() {
+  console.log('API called successfully.');
+}, function(error) {
+  console.error(error);
+});
 
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
-};
-apiInstance.deletePet(petId, opts, callback);
 ```
 
 ### Parameters
@@ -141,15 +135,12 @@ var apiInstance = new SwaggerPetstore.PetApi();
 
 var status = ["status_example"]; // [String] | Status values that need to be considered for filter
 
+apiInstance.findPetsByStatus(status).then(function(data) {
+  console.log('API called successfully. Returned data: ' + data);
+}, function(error) {
+  console.error(error);
+});
 
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.findPetsByStatus(status, callback);
 ```
 
 ### Parameters
@@ -192,15 +183,12 @@ var apiInstance = new SwaggerPetstore.PetApi();
 
 var tags = ["tags_example"]; // [String] | Tags to filter by
 
+apiInstance.findPetsByTags(tags).then(function(data) {
+  console.log('API called successfully. Returned data: ' + data);
+}, function(error) {
+  console.error(error);
+});
 
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.findPetsByTags(tags, callback);
 ```
 
 ### Parameters
@@ -245,15 +233,12 @@ var apiInstance = new SwaggerPetstore.PetApi();
 
 var petId = 789; // Integer | ID of pet to return
 
+apiInstance.getPetById(petId).then(function(data) {
+  console.log('API called successfully. Returned data: ' + data);
+}, function(error) {
+  console.error(error);
+});
 
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.getPetById(petId, callback);
 ```
 
 ### Parameters
@@ -296,15 +281,12 @@ var apiInstance = new SwaggerPetstore.PetApi();
 
 var body = new SwaggerPetstore.Pet(); // Pet | Pet object that needs to be added to the store
 
+apiInstance.updatePet(body).then(function() {
+  console.log('API called successfully.');
+}, function(error) {
+  console.error(error);
+});
 
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
-};
-apiInstance.updatePet(body, callback);
 ```
 
 ### Parameters
@@ -351,15 +333,12 @@ var opts = {
   'name': "name_example", // String | Updated name of the pet
   'status': "status_example" // String | Updated status of the pet
 };
+apiInstance.updatePetWithForm(petId, opts).then(function() {
+  console.log('API called successfully.');
+}, function(error) {
+  console.error(error);
+});
 
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
-};
-apiInstance.updatePetWithForm(petId, opts, callback);
 ```
 
 ### Parameters
@@ -408,15 +387,12 @@ var opts = {
   'additionalMetadata': "additionalMetadata_example", // String | Additional data to pass to server
   'file': "/path/to/file.txt" // File | file to upload
 };
+apiInstance.uploadFile(petId, opts).then(function(data) {
+  console.log('API called successfully. Returned data: ' + data);
+}, function(error) {
+  console.error(error);
+});
 
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.uploadFile(petId, opts, callback);
 ```
 
 ### Parameters

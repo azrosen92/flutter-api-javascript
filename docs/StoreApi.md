@@ -26,15 +26,12 @@ var apiInstance = new SwaggerPetstore.StoreApi();
 
 var orderId = 789; // Integer | ID of the order that needs to be deleted
 
+apiInstance.deleteOrder(orderId).then(function() {
+  console.log('API called successfully.');
+}, function(error) {
+  console.error(error);
+});
 
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
-};
-apiInstance.deleteOrder(orderId, callback);
 ```
 
 ### Parameters
@@ -76,15 +73,12 @@ api_key.apiKey = 'YOUR API KEY';
 //api_key.apiKeyPrefix = 'Token';
 
 var apiInstance = new SwaggerPetstore.StoreApi();
+apiInstance.getInventory().then(function(data) {
+  console.log('API called successfully. Returned data: ' + data);
+}, function(error) {
+  console.error(error);
+});
 
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.getInventory(callback);
 ```
 
 ### Parameters
@@ -119,15 +113,12 @@ var apiInstance = new SwaggerPetstore.StoreApi();
 
 var orderId = 789; // Integer | ID of pet that needs to be fetched
 
+apiInstance.getOrderById(orderId).then(function(data) {
+  console.log('API called successfully. Returned data: ' + data);
+}, function(error) {
+  console.error(error);
+});
 
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.getOrderById(orderId, callback);
 ```
 
 ### Parameters
@@ -165,15 +156,12 @@ var apiInstance = new SwaggerPetstore.StoreApi();
 
 var body = new SwaggerPetstore.Order(); // Order | order placed for purchasing the pet
 
+apiInstance.placeOrder(body).then(function(data) {
+  console.log('API called successfully. Returned data: ' + data);
+}, function(error) {
+  console.error(error);
+});
 
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.placeOrder(body, callback);
 ```
 
 ### Parameters

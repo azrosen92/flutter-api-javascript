@@ -56,21 +56,13 @@
     this.apiClient = apiClient || ApiClient.instance;
 
 
-    /**
-     * Callback function to receive the result of the createUser operation.
-     * @callback module:api/UserApi~createUserCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
-     */
 
     /**
      * Create user
      * This can only be done by the logged in user.
      * @param {module:model/User} body Created user object
-     * @param {module:api/UserApi~createUserCallback} callback The callback function, accepting three arguments: error, data, response
      */
-    this.createUser = function(body, callback) {
+    this.createUser = function(body) {
       var postBody = body;
 
       // verify the required parameter 'body' is set
@@ -96,25 +88,17 @@
       return this.apiClient.callApi(
         '/user', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
+        authNames, contentTypes, accepts, returnType
       );
     }
 
-    /**
-     * Callback function to receive the result of the createUsersWithArrayInput operation.
-     * @callback module:api/UserApi~createUsersWithArrayInputCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
-     */
 
     /**
      * Creates list of users with given input array
      * 
      * @param {Array.<module:model/User>} body List of user object
-     * @param {module:api/UserApi~createUsersWithArrayInputCallback} callback The callback function, accepting three arguments: error, data, response
      */
-    this.createUsersWithArrayInput = function(body, callback) {
+    this.createUsersWithArrayInput = function(body) {
       var postBody = body;
 
       // verify the required parameter 'body' is set
@@ -140,25 +124,17 @@
       return this.apiClient.callApi(
         '/user/createWithArray', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
+        authNames, contentTypes, accepts, returnType
       );
     }
 
-    /**
-     * Callback function to receive the result of the createUsersWithListInput operation.
-     * @callback module:api/UserApi~createUsersWithListInputCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
-     */
 
     /**
      * Creates list of users with given input array
      * 
      * @param {Array.<module:model/User>} body List of user object
-     * @param {module:api/UserApi~createUsersWithListInputCallback} callback The callback function, accepting three arguments: error, data, response
      */
-    this.createUsersWithListInput = function(body, callback) {
+    this.createUsersWithListInput = function(body) {
       var postBody = body;
 
       // verify the required parameter 'body' is set
@@ -184,25 +160,17 @@
       return this.apiClient.callApi(
         '/user/createWithList', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
+        authNames, contentTypes, accepts, returnType
       );
     }
 
-    /**
-     * Callback function to receive the result of the deleteUser operation.
-     * @callback module:api/UserApi~deleteUserCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
-     */
 
     /**
      * Delete user
      * This can only be done by the logged in user.
      * @param {String} username The name that needs to be deleted
-     * @param {module:api/UserApi~deleteUserCallback} callback The callback function, accepting three arguments: error, data, response
      */
-    this.deleteUser = function(username, callback) {
+    this.deleteUser = function(username) {
       var postBody = null;
 
       // verify the required parameter 'username' is set
@@ -229,26 +197,18 @@
       return this.apiClient.callApi(
         '/user/{username}', 'DELETE',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
+        authNames, contentTypes, accepts, returnType
       );
     }
 
-    /**
-     * Callback function to receive the result of the getUserByName operation.
-     * @callback module:api/UserApi~getUserByNameCallback
-     * @param {String} error Error message, if any.
-     * @param {module:model/User} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
 
     /**
      * Get user by user name
      * 
      * @param {String} username The name that needs to be fetched. Use user1 for testing. 
-     * @param {module:api/UserApi~getUserByNameCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {module:model/User}
      */
-    this.getUserByName = function(username, callback) {
+    this.getUserByName = function(username) {
       var postBody = null;
 
       // verify the required parameter 'username' is set
@@ -275,27 +235,19 @@
       return this.apiClient.callApi(
         '/user/{username}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
+        authNames, contentTypes, accepts, returnType
       );
     }
 
-    /**
-     * Callback function to receive the result of the loginUser operation.
-     * @callback module:api/UserApi~loginUserCallback
-     * @param {String} error Error message, if any.
-     * @param {'String'} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
 
     /**
      * Logs user into the system
      * 
      * @param {String} username The user name for login
      * @param {String} password The password for login in clear text
-     * @param {module:api/UserApi~loginUserCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {'String'}
      */
-    this.loginUser = function(username, password, callback) {
+    this.loginUser = function(username, password) {
       var postBody = null;
 
       // verify the required parameter 'username' is set
@@ -328,24 +280,16 @@
       return this.apiClient.callApi(
         '/user/login', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
+        authNames, contentTypes, accepts, returnType
       );
     }
 
-    /**
-     * Callback function to receive the result of the logoutUser operation.
-     * @callback module:api/UserApi~logoutUserCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
-     */
 
     /**
      * Logs out current logged in user session
      * 
-     * @param {module:api/UserApi~logoutUserCallback} callback The callback function, accepting three arguments: error, data, response
      */
-    this.logoutUser = function(callback) {
+    this.logoutUser = function() {
       var postBody = null;
 
 
@@ -366,26 +310,18 @@
       return this.apiClient.callApi(
         '/user/logout', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
+        authNames, contentTypes, accepts, returnType
       );
     }
 
-    /**
-     * Callback function to receive the result of the updateUser operation.
-     * @callback module:api/UserApi~updateUserCallback
-     * @param {String} error Error message, if any.
-     * @param data This operation does not return a value.
-     * @param {String} response The complete HTTP response.
-     */
 
     /**
      * Updated user
      * This can only be done by the logged in user.
      * @param {String} username name that need to be updated
      * @param {module:model/User} body Updated user object
-     * @param {module:api/UserApi~updateUserCallback} callback The callback function, accepting three arguments: error, data, response
      */
-    this.updateUser = function(username, body, callback) {
+    this.updateUser = function(username, body) {
       var postBody = body;
 
       // verify the required parameter 'username' is set
@@ -417,7 +353,7 @@
       return this.apiClient.callApi(
         '/user/{username}', 'PUT',
         pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, callback
+        authNames, contentTypes, accepts, returnType
       );
     }
   };

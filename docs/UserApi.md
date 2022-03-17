@@ -30,15 +30,12 @@ var apiInstance = new SwaggerPetstore.UserApi();
 
 var body = new SwaggerPetstore.User(); // User | Created user object
 
+apiInstance.createUser(body).then(function() {
+  console.log('API called successfully.');
+}, function(error) {
+  console.error(error);
+});
 
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
-};
-apiInstance.createUser(body, callback);
 ```
 
 ### Parameters
@@ -76,15 +73,12 @@ var apiInstance = new SwaggerPetstore.UserApi();
 
 var body = [new SwaggerPetstore.User()]; // [User] | List of user object
 
+apiInstance.createUsersWithArrayInput(body).then(function() {
+  console.log('API called successfully.');
+}, function(error) {
+  console.error(error);
+});
 
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
-};
-apiInstance.createUsersWithArrayInput(body, callback);
 ```
 
 ### Parameters
@@ -122,15 +116,12 @@ var apiInstance = new SwaggerPetstore.UserApi();
 
 var body = [new SwaggerPetstore.User()]; // [User] | List of user object
 
+apiInstance.createUsersWithListInput(body).then(function() {
+  console.log('API called successfully.');
+}, function(error) {
+  console.error(error);
+});
 
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
-};
-apiInstance.createUsersWithListInput(body, callback);
 ```
 
 ### Parameters
@@ -168,15 +159,12 @@ var apiInstance = new SwaggerPetstore.UserApi();
 
 var username = "username_example"; // String | The name that needs to be deleted
 
+apiInstance.deleteUser(username).then(function() {
+  console.log('API called successfully.');
+}, function(error) {
+  console.error(error);
+});
 
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
-};
-apiInstance.deleteUser(username, callback);
 ```
 
 ### Parameters
@@ -214,15 +202,12 @@ var apiInstance = new SwaggerPetstore.UserApi();
 
 var username = "username_example"; // String | The name that needs to be fetched. Use user1 for testing. 
 
+apiInstance.getUserByName(username).then(function(data) {
+  console.log('API called successfully. Returned data: ' + data);
+}, function(error) {
+  console.error(error);
+});
 
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.getUserByName(username, callback);
 ```
 
 ### Parameters
@@ -262,15 +247,12 @@ var username = "username_example"; // String | The user name for login
 
 var password = "password_example"; // String | The password for login in clear text
 
+apiInstance.loginUser(username, password).then(function(data) {
+  console.log('API called successfully. Returned data: ' + data);
+}, function(error) {
+  console.error(error);
+});
 
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-apiInstance.loginUser(username, password, callback);
 ```
 
 ### Parameters
@@ -306,15 +288,12 @@ Logs out current logged in user session
 var SwaggerPetstore = require('swagger_petstore');
 
 var apiInstance = new SwaggerPetstore.UserApi();
+apiInstance.logoutUser().then(function() {
+  console.log('API called successfully.');
+}, function(error) {
+  console.error(error);
+});
 
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
-};
-apiInstance.logoutUser(callback);
 ```
 
 ### Parameters
@@ -351,15 +330,12 @@ var username = "username_example"; // String | name that need to be updated
 
 var body = new SwaggerPetstore.User(); // User | Updated user object
 
+apiInstance.updateUser(username, body).then(function() {
+  console.log('API called successfully.');
+}, function(error) {
+  console.error(error);
+});
 
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
-};
-apiInstance.updateUser(username, body, callback);
 ```
 
 ### Parameters
